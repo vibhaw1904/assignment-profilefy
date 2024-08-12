@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "name": "Wireless Mouse",
+      "image": "https://images.unsplash.com/photo-1588066461625-8d6fd199de8d?auto=format&fit=crop&w=150&q=80",
+      "price": 25.99,
+      "description": "A sleek wireless mouse with ergonomic design."
+    },
+    {
+      "id": 2,
+      "name": "Mechanical Keyboard",
+      "image": "https://images.unsplash.com/photo-1591107404693-15f86f4d3666?auto=format&fit=crop&w=150&q=80",
+      "price": 89.99,
+      "description": "A mechanical keyboard with customizable RGB lighting."
+    },
+    {
+      "id": 3,
+      "name": "Noise Cancelling Headphones",
+      "image": "https://images.unsplash.com/photo-1601758123927-9586e818d51f?auto=format&fit=crop&w=150&q=80",
+      "price": 129.99,
+      "description": "Over-ear headphones with active noise cancellation."
+    },
+    {
+      "id": 4,
+      "name": "4K Monitor",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=150&q=80",
+      "price": 349.99,
+      "description": "A 27-inch 4K UHD monitor with ultra-thin bezels."
+    },
+    {
+      "id": 5,
+      "name": "Bluetooth Speaker",
+      "image": "https://images.unsplash.com/photo-1598550432537-e9a85d568f84?auto=format&fit=crop&w=150&q=80",
+      "price": 45.99,
+      "description": "Portable Bluetooth speaker with high-quality sound."
+    },
+    {
+      "id": 6,
+      "name": "Smartwatch",
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=150&q=80",
+      "price": 199.99,
+      "description": "Smartwatch with heart rate monitor and GPS."
+    },
+    {
+      "id": 7,
+      "name": "Gaming Laptop",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=150&q=80",
+      "price": 1299.99,
+      "description": "High-performance gaming laptop with NVIDIA graphics."
+    },
+    {
+      "id": 8,
+      "name": "External Hard Drive",
+      "image": "https://images.unsplash.com/photo-1560976114-3a5bf8aeeb41?auto=format&fit=crop&w=150&q=80",
+      "price": 59.99,
+      "description": "2TB external hard drive with USB 3.0 connectivity."
+    },
+    {
+      "id": 9,
+      "name": "Wireless Earbuds",
+      "image": "https://images.unsplash.com/photo-1600334129128-8ab5705f469f?auto=format&fit=crop&w=150&q=80",
+      "price": 69.99,
+      "description": "True wireless earbuds with noise isolation."
+    },
+    {
+      "id": 10,
+      "name": "Smartphone",
+      "image": "https://images.unsplash.com/photo-1512496015851-a8029187a129?auto=format&fit=crop&w=150&q=80",
+      "price": 899.99,
+      "description": "Latest model smartphone with 128GB storage."
+    },
+    {
+      "id": 11,
+      "name": "Tablet",
+      "image": "https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=150&q=80",
+      "price": 399.99,
+      "description": "10-inch tablet with retina display and 64GB storage."
+    },
+    {
+      "id": 12,
+      "name": "Fitness Tracker",
+      "image": "https://images.unsplash.com/photo-1578302758062-2d0f5d8161d0?auto=format&fit=crop&w=150&q=80",
+      "price": 79.99,
+      "description": "Waterproof fitness tracker with sleep monitoring."
+    },
+    {
+      "id": 13,
+      "name": "Digital Camera",
+      "image": "https://images.unsplash.com/photo-1496614669181-90b0b336fa53?auto=format&fit=crop&w=150&q=80",
+      "price": 549.99,
+      "description": "24.2MP digital camera with 4K video recording."
+    },
+    {
+      "id": 14,
+      "name": "Portable Charger",
+      "image": "https://images.unsplash.com/photo-1505842465776-3b4953ca4f5f?auto=format&fit=crop&w=150&q=80",
+      "price": 29.99,
+      "description": "10000mAh portable charger with fast charging."
+    },
+    {
+      "id": 15,
+      "name": "VR Headset",
+      "image": "https://images.unsplash.com/photo-1516908205727-40afad9449f1?auto=format&fit=crop&w=150&q=80",
+      "price": 299.99,
+      "description": "Virtual reality headset with 360-degree video."
+    },
+    {
+      "id": 16,
+      "name": "Streaming Stick",
+      "image": "https://images.unsplash.com/photo-1607543506223-3b7eacfc4ab6?auto=format&fit=crop&w=150&q=80",
+      "price": 49.99,
+      "description": "Streaming stick with 4K HDR support."
+    },
+    {
+      "id": 17,
+      "name": "Smart Light Bulbs",
+      "image": "https://images.unsplash.com/photo-1518998053901-5348d3961e3e?auto=format&fit=crop&w=150&q=80",
+      "price": 59.99,
+      "description": "Smart light bulbs with adjustable brightness and color."
+    },
+    {
+      "id": 18,
+      "name": "Wireless Charger",
+      "image": "https://images.unsplash.com/photo-1533229506131-1ff209b4c663?auto=format&fit=crop&w=150&q=80",
+      "price": 39.99,
+      "description": "Fast wireless charger with 10W output."
+    },
+    {
+      "id": 19,
+      "name": "Smart Thermostat",
+      "image": "https://images.unsplash.com/photo-1518972559570-5cc45d16e18e?auto=format&fit=crop&w=150&q=80",
+      "price": 249.99,
+      "description": "Smart thermostat with remote temperature control."
+    },
+    {
+      "id": 20,
+      "name": "Robot Vacuum",
+      "image": "https://images.unsplash.com/photo-1565581986378-1a95cc2c3994?auto=format&fit=crop&w=150&q=80",
+      "price": 499.99,
+      "description": "Robot vacuum cleaner with smart mapping technology."
+    }
+  ]
+  
