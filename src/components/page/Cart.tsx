@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCart } from '../../context/Context';
 
 type CartItem = {
   id: string;
@@ -14,20 +15,22 @@ type CartProps = {
   onUpdateQuantity: (id: string, newQuantity: number) => void;
 };
 
-const Cart: React.FC<CartProps> = ({ items, onRemoveItem, onUpdateQuantity }) => {
+const Cart: React.FC<CartProps> = () => {
+    const { cart, removeFromCart, updateQuantity } = useCart();
+
   const calculateTotal = () => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
-      {items.length === 0 ? (
+      {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <>
           <div className="space-y-4">
-            {items.map((item) => (
+            {cart.map((item) => (
               <div key={item.id} className="flex items-center border-b pb-4">
                 <img src={item.image} alt={item.title} className="w-20 h-20 object-cover mr-4" />
                 <div className="flex-grow">
@@ -35,14 +38,14 @@ const Cart: React.FC<CartProps> = ({ items, onRemoveItem, onUpdateQuantity }) =>
                   <p className="text-gray-600">${item.price.toFixed(2)}</p>
                   <div className="flex items-center mt-2">
                     <button
-                      onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
+                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
                       className="bg-gray-200 px-2 py-1 rounded"
                     >
                       -
                     </button>
                     <span className="mx-2">{item.quantity}</span>
                     <button
-                      onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+                      onClick={()=>updateQuantity(item.id,item.quantity+1)}
                       className="bg-gray-200 px-2 py-1 rounded"
                     >
                       +
@@ -50,7 +53,7 @@ const Cart: React.FC<CartProps> = ({ items, onRemoveItem, onUpdateQuantity }) =>
                   </div>
                 </div>
                 <button
-                  onClick={() => onRemoveItem(item.id)}
+                  onClick={() => removeFromCart(item.id)}
                   className="text-red-500 hover:text-red-700"
                 >
                   Remove
