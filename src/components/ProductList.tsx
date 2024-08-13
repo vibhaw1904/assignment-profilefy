@@ -4,11 +4,13 @@ import ProductCard from './ProductCard';
 
 
 type ProductListProps = {
-    id:string,
-    name:string,
-    image:string,
-    price:number,
-    description:string
+    id: string;
+    title: string;
+    image: string;
+    price: number;
+    description: string;
+    rating: number;
+    discount?: number;
 };
 
 
@@ -18,7 +20,7 @@ const ProductList:React.FC<ProductListProps> = () => {
     const [products,setProducts]=useState<ProductListProps[]>([]);
 
     useEffect(() => {
-        fetch('/Products.json')
+        fetch('https://fakestoreapi.com/products')
             .then((res) => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -31,7 +33,7 @@ const ProductList:React.FC<ProductListProps> = () => {
 
 
 
-    return <div className='flex grid-flow-col grid-cols-3'>
+    return <div className='grid  gap-3 grid-cols-3'>
         {
             products.map((product)=>(
                 <ProductCard key={product.id} product={product}/>
