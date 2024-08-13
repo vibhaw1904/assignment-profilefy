@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { useCart } from '../context/Context';
 
 interface Product {
   id: string;
@@ -15,7 +17,21 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-    console.log(product)
+
+    const {addToCart}=useCart()
+
+
+    const handleAddToCart=()=>{
+        addToCart({
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            quantity: 1,
+            image: product.image,            
+        })
+        console.log();
+        
+    }
     const truncateTitle = (title: string, wordLimit: number) => {
         const words = title.split(' ');
         if (words.length > wordLimit) {
@@ -26,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     
       const truncatedTitle = truncateTitle(product.title, 3);
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 w-[400px] " key={product.id} >
       <div className="relative">
         <img 
           className="w-full h-64 object-cover" 
@@ -51,7 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             {/* <span className="ml-1 text-sm font-semibold text-gray-600">{product.rating.toFixed(1)}</span> */}
           </div>
         </div>
-        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md font-medium hover:bg-indigo-700 transition-colors duration-300">
+        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md font-medium hover:bg-indigo-700 transition-colors duration-300" onClick={handleAddToCart}>
           Add to Cart
         </button>
       </div>

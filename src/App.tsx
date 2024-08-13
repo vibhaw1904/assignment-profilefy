@@ -1,4 +1,5 @@
 import './App.css'
+import Navbar from './components/Navbar';
 import Cart from './components/page/Cart'
 import DashBoard from './components/page/DashBoard'
 
@@ -8,9 +9,10 @@ function App() {
 
   return (
     <Router>
+      <Navbar/>
  <Routes>
         <Route path="/" element={<DashBoard/>} />
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   )

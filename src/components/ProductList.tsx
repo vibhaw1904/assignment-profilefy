@@ -33,10 +33,11 @@ const ProductList:React.FC<ProductListProps> = () => {
 
 
 
-    return <div className='grid  gap-3 grid-cols-3'>
+    return <div className='grid  gap-3 grid-cols-3 px-4 mt-2  '>
         {
             products.map((product)=>(
-                <ProductCard key={product.id} product={product}/>
+                <div className='flex items-center justify-center' key={product.id}>                <ProductCard key={product.id} product={product}/>
+</div>
             ))
         }
     </div>
