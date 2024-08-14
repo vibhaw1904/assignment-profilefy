@@ -1,18 +1,10 @@
 import React from 'react';
 import { useCart } from '../../context/Context';
 
-type CartItem = {
-  id: string;
-  title: string;
-  price: number;
-  quantity: number;
-  image: string;
-};
+
 
 type CartProps = {
-  items: CartItem[];
-  onRemoveItem: (id: string) => void;
-  onUpdateQuantity: (id: string, newQuantity: number) => void;
+ 
 };
 
 const Cart: React.FC<CartProps> = () => {
@@ -23,13 +15,13 @@ const Cart: React.FC<CartProps> = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 ">
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <>
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             {cart.map((item) => (
               <div key={item.id} className="flex items-center border-b pb-4">
                 <img src={item.image} alt={item.title} className="w-20 h-20 object-cover mr-4" />

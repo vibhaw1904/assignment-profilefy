@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 
-
-
-type ProductListProps = {
+export type Product = {
     id: string;
     title: string;
     image: string;
@@ -13,11 +11,10 @@ type ProductListProps = {
     discount?: number;
 };
 
+type ProductListProps = {};
 
-
-const ProductList:React.FC<ProductListProps> = () => {
-    
-    const [products,setProducts]=useState<ProductListProps[]>([]);
+const ProductList: React.FC<ProductListProps> = () => {
+    const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -31,15 +28,15 @@ const ProductList:React.FC<ProductListProps> = () => {
             .catch((error) => console.error('Error fetching products:', error));
     }, []);
 
+    return (
+        <div className='flex justify-center items-center mt-4'>
+            <div className='grid gap-3 grid-cols-3'>
+                {products.map((product) => (
+                    <ProductCard product={product} key={product.id} />
+                ))}
+            </div>
+        </div>
+    );
+};
 
-
-    return <div className='grid  gap-3 grid-cols-3 px-4 mt-2  '>
-        {
-            products.map((product)=>(
-                <div className='flex items-center justify-center' key={product.id}>                <ProductCard key={product.id} product={product}/>
-</div>
-            ))
-        }
-    </div>
-}
 export default ProductList;
