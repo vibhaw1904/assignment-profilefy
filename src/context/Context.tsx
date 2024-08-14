@@ -1,7 +1,7 @@
-// CartContext.tsx
+
 
 import React, { createContext, useContext, useReducer } from "react";
-import { CartState, CartAction, cartReducer, CartItem } from "./Reducers";
+import { CartState, cartReducer, CartItem } from "./Reducers";
 type CartContextType = CartState & {
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
